@@ -10,7 +10,7 @@ on:
 jobs:
   
   tests:
-    runs-on: self-runner
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
 
@@ -30,7 +30,7 @@ jobs:
       
   build:
     needs: tests
-    runs-on: self-runner
+    runs-on: ubuntu-latest
     steps:
     - name: Build
       run: go build -v main.go
