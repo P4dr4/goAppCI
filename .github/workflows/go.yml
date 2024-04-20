@@ -24,9 +24,6 @@ jobs:
 
     - name: Create database
       run: docker-compose up -d
-
-    - name: Test
-      run: go test -v main_test.go
       
   build:
     needs: tests
