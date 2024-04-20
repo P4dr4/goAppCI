@@ -21,4 +21,3 @@ require (
 	gorm.io/gorm v1.22.4 // indirect
 )
 
-
