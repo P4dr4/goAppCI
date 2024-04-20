@@ -24,10 +24,3 @@ jobs:
 
     - name: Create database
       run: docker-compose up -d
-      
-  build:
-    needs: tests
-    runs-on: ubuntu-latest
-    steps:
-    - name: Build
-      run: go build -v main.go
