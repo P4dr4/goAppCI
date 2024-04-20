@@ -24,3 +24,6 @@ jobs:
 
     - name: Create database
       run: docker-compose up -d
+
+    - name: build
+      run: go build main.go
