@@ -10,9 +10,10 @@ on:
 jobs:
   
   tests-and-build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: ["ubuntu-latest", "windows-latest"]
         go_version: ["1.17", "1.18", ">=1.18"]
     steps:
     - uses: actions/checkout@v3
@@ -30,3 +31,7 @@ jobs:
 
     - name: build
       run: go build main.go
+            
+    - name: OpenCommit — improve commits with AI 🧙
+      uses: di-sukharev/opencommit@github-action-v1.0.2
+            
