@@ -30,8 +30,4 @@ jobs:
       run: docker-compose up -d
 
     - name: build
-      run: go build main.go
-            
-    - name: OpenCommit — improve commits with AI 🧙
-      uses: di-sukharev/opencommit@github-action-v1.0.2
-            
+      run: go build main.go            
